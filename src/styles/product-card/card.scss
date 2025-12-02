@@ -1,7 +1,7 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 50px 40px 72px;
+  padding: 50px 40px;
   gap: 46px 48px;
 }
 
@@ -14,7 +14,7 @@
   flex-direction: column;
   border: 1px solid $card-border;
 
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease;
   transform-origin: center;
 
   &:hover {
@@ -32,62 +32,56 @@
     height: 100%;
   }
 
-  &__info {
-    &-card-title {
-      font-size: 12px;
-      font-weight: 500;
-      margin: 0;
-      padding-bottom: 4px;
-      line-height: 18px;
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0;
+    padding-bottom: 4px;
+    line-height: 18px;
+  }
 
-      &:hover {
-        color: $color-hover-title;
-      }
-    }
+  &__code {
+    color: $secondary-color;
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 16px;
+    line-height: 14px;
+  }
 
-    &-card-code {
-      color: $secondary-color;
-      font-size: 10px;
-      font-weight: 400;
-      margin: 0;
-      padding-bottom: 16px;
-      line-height: 14px;
-    }
+  &__rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 24px;
+  }
 
-    &-card-rating {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-bottom: 24px;
-    }
+  &__reviews {
+    font-size: 10px;
+    font-weight: 400;
+    margin: 0;
+    line-height: 14px;
+  }
 
-    &-reviews {
-      font-size: 10px;
-      font-weight: 400;
-      margin: 0;
-      line-height: 14px;
-    }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
-    &-price {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
+  &__price-text {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    color: $secondary-color;
+    margin: 0;
+  }
 
-    &-price-text {
-      font-size: 12px;
-      line-height: 18px;
-      font-weight: 400;
-      color: $secondary-color;
-      margin: 0;
-    }
-
-    &-price-amount {
-      font-size: 16px;
-      line-height: 18px;
-      font-weight: 700;
-      margin: 0;
-    }
+  &__price-amount {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    margin: 0;
   }
 
   &__button {
@@ -110,6 +104,10 @@
       background-color: $button-text;
       border: 1px solid $button-color;
     }
+  }
+
+  &:hover &__title {
+    color: $color-hover-title;
   }
 }
 
